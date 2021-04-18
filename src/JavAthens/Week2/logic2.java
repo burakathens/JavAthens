@@ -38,12 +38,15 @@ public class logic2 {
         *  onlukDigit(23,324) >> true
         *  onlukDigit(123,456) >> false
         *
-        * public static boolean onlukDigit (int a, intb){
+        * public static boolean onlukDigit (int a, int b){
         *
         * }
         *
         * */
 
+        System.out.println("----");
+        System.out.println(onlukDigit(123, 456));
+        System.out.println(onlukDigit(123, 324));
 
 
     }
@@ -82,6 +85,15 @@ public class logic2 {
             //b[8]= list son elemanı
         }
         return b;
+    }
+    public static boolean onlukDigit (int a, int b){
+        int aa=(a%100)/10;
+        int bb=(b%100)/10;
+        if(aa==bb){
+            return true;
+        }
+        else return false;
+
     }
 
 }
