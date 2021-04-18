@@ -19,6 +19,7 @@ public class logic2 {
 
 
         int [] aa={1,2,2,3,1,4,2,5,6,8,7,5,9,1};
+        System.out.println("----------");
         System.out.println(Arrays.toString(TekrariSil(aa)));
 
         /*Given three ints, a b c, return true if b is greater than a, and c is greater than b.
@@ -38,12 +39,15 @@ public class logic2 {
         *  onlukDigit(23,324) >> true
         *  onlukDigit(123,456) >> false
         *
-        * public static boolean onlukDigit (int a, intb){
+        * public static boolean onlukDigit (int a, int b){
         *
         * }
         *
         * */
 
+        System.out.println("----");
+        System.out.println(onlukDigit(123, 456));
+        System.out.println(onlukDigit(123, 324));
 
 
     }
@@ -70,18 +74,50 @@ public class logic2 {
         //int [] aa={1,2,2,3,1,4,2,5,6,8,7,5,9,1};
 
         ArrayList<Integer> list=new ArrayList();
+
+
+
+
+        //int [] aa={1,2,2,3,1,4,2,5,6,8,7,5,9,1};
         for(int i:dizi){
             if(!list.contains(i))
             list.add(i);
+            /*
+            * listeninbirinci lemanı icin once i=1 olacak
+            * list.contains(1) >> listede 1 sayısı varmı? demek
+            * ! işareti yazılanın tersinin alır yani
+            * !list.contains(1) >> 1 sayısı yok mu?  not contains?
+            * liste basta bos o yuzden 1 sayısı icinde yoktur
+            * if bana ne diyecek? true donecek?? if li code blogu calıssın demek
+            * list.add(1)>> listemiz bir elemanlı bir listedir
+            * iknci asama i=2 sonra tekrar 2 vs....
+            * ------------
+            * ikinci 2 sayısı icin
+            * !list.contains(2) >> listede 2 sayısı varmı? (suan var)
+            *  dongu dizinin son elamanına kadar devam eder...
+            * */
         }
         int[] b = new int[list.size()];
+        // liste size i foreach dongusu sonrası belli olur bu ornek kapsamında 9dur
+        // b={0,0,0,0,0,0,0,0,0}
 
-        for(int a=0;a< list.size();a++){
-              b[a]= list.get(a);
+        for(int i=0;i< list.size();i++){
+              b[i]= list.get(i);
               //b[0]=list 0 indisli elemanı
             //b[8]= list son elemanı
         }
+        //b={1,2,3,4,5,6,7,8,9}
+
         return b;
+    }
+    public static boolean onlukDigit (int a, int b){
+        int aa=(a%100)/10;
+        int bb=(b%100)/10;
+        if(aa==bb){
+            return true;
+        }
+        else return false;
+
     }
 
 }
