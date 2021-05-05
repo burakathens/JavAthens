@@ -10,6 +10,8 @@ public class CodingBatOdevler {
             not2: master rolünden kesinlikle push yapmıyoruz :) tesekkurler...
 
         * *******************
+
+
         *   18 NİSAN ODEVLERİ
         *
         * ********************* */
